@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PartController;
+use App\Http\Controllers\JqueryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//汎用パーツ
 Route::resource('/part', PartController::class);
+
+//動的パーツ
+Route::resource('/jquery', JqueryController::class);
